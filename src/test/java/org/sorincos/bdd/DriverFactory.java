@@ -1,6 +1,7 @@
 package org.sorincos.bdd;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
@@ -19,7 +20,7 @@ public class DriverFactory {
   ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>() {
     @Override
     protected WebDriver initialValue() {
-      return new FirefoxDriver(); // or other browser drivers
+      return new ChromeDriver(); // or other browser drivers
     }
   };
 
